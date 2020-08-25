@@ -23,10 +23,34 @@ Vue reactive, configurable, easy to use and SSR friendly media query plugin
 }
 ```
 
+## Instalation
+
+### NUXT.js
+1. Create js file in plugins folder with choosed name
+
+2. Use your [configuration object](#configuration-object)
+```javascript
+//  plugins/[choosed-name].js
+import vueMediaQuery from 'vue-media-query'
+import Vue from 'vue'
+
+Vue.use(media, [options-object])
+})
+```
+
+3. Import as plugin in nuxt.config.js
+```javascript
+//  nuxt.config.js
+plugins {
+  '~plugins/[choosed-name].js'
+}
+```
+
 ## Usage
 ```javascript
 this.$media.isClient && this.$media.m && !this.$media.ms
 ```
 
 ## Requirments
-Vue 2.6.0+
+* Vue 2.6.0+
+* IE8+
