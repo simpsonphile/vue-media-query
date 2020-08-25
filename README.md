@@ -47,8 +47,32 @@ plugins {
 ```
 
 ## Usage
+You can use plugin in script
 ```javascript
 this.$media.isClient && this.$media.m && !this.$media.ms
+```
+or in template
+```javascript
+{{ $media.isClient && $media.m && !$media.ms }}
+```
+
+### Examples
+to get width, height, screen type You can simply:
+```javascript
+{{ $media.width }}
+{{ $media.height }}
+{{ $media.scrType }}
+```
+To use specified breakpoint rules:
+```javascript
+{{ $media.[rule-name] }}
+```
+rule-name is specified breakpoint name
+
+To render something only in client mode you can:
+```javascript
+{{ $media.isClient && $media.[rule-name] }}
+// it will evaluate to true only if it is client mode and in specified rule 
 ```
 
 ## Requirments
